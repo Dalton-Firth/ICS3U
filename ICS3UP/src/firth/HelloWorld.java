@@ -8,7 +8,7 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Hello World");
+		System.out.println("Hello World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		
 		int x=0;
 		
@@ -17,7 +17,9 @@ public class HelloWorld {
 		{
 			x++;
 		
-		System.out.println("x");
+		
+		System.out.println("x"+x);
+		System.out.print("x");
 		
 		}
 		}
