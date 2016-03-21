@@ -34,8 +34,8 @@ public class QuadraticAssignment {
 		
 
 		if((b * b) - (4 * a * c)>=0){
-			answer1 = ((b) + Math.sqrt((b * b) - (4 * a * c))) / 2 * a;
-			answer2 = ((b) - Math.sqrt((b * b) - (4 * a * c))) / 2 * a;
+			answer1 = ((-b) + Math.sqrt(Math.pow(b,2) - (4 * a * c))) / (2 * a);
+			answer2 = ((-b) - Math.sqrt(Math.pow(b,2) - (4 * a * c))) / (2 * a);
 			System.out.println("x= " + df.format(answer1) + " x= " + df.format(answer2));
 		}
 		else{
