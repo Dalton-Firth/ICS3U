@@ -2,7 +2,7 @@ package firth;
 
 import java.util.Scanner;
 /*Dalton Firth
- * Dice Outcome Counter
+ * Tic Tac Toe Game
  * Created: 2016/05/13
  * A basic game of tic-tac-toe.
  */
