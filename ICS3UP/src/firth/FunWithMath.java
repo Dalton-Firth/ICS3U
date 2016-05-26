@@ -37,6 +37,11 @@ public class FunWithMath {
 		multiplying(numInput1, numInput2);
 		dividing(numInput1, numInput2);
 		
+		System.out.println(numInput1+" + "+numInput2+" = "+df.format(adding(numInput1,numInput2)));
+		System.out.println(numInput1+" - "+numInput2+" = "+df.format(subtracting(numInput1,numInput2)));
+		System.out.println(numInput1+" * "+numInput2+" = "+df.format(multiplying(numInput1,numInput2)));
+		System.out.println(numInput1+" / "+numInput2+" = "+df.format(dividing(numInput1,numInput2)));
+		
 		scan.close();
 
 	}
@@ -45,36 +50,40 @@ public class FunWithMath {
 	 * @param num1: double
 	 * @param num2: double
 	 */
-	public static void adding(double num1, double num2)
+	public static double adding(double num1, double num2)
 	{
-		System.out.println(num1+" + "+num2+" = "+df.format(num1+num2));
+		double sum = num1+num2;
+		return sum;
 	}
 	/**
 	 * Subtracts the parameters then prints the result
 	 * @param num1: double
 	 * @param num2: double
 	 */
-	public static void subtracting(double num1, double num2)
+	public static double subtracting(double num1, double num2)
 	{
-		System.out.println(num1+" - "+num2+" = "+df.format(num1-num2));
+		double differance = num1-num2;
+		return differance;
 	}
 	/**
 	 * Multiplies the parameters then prints the result
 	 * @param num1: double
 	 * @param num2: double
 	 */
-	public static void multiplying(double num1, double num2)
+	public static double multiplying(double num1, double num2)
 	{
-		System.out.println(num1+" * "+num2+" = "+df.format(num1*num2));
+		double product = num1*num2;
+		return product;
 	}
 	/**
 	 * Divides the parameters then prints the result
 	 * @param num1: double
 	 * @param num2: double
 	 */
-	public static void dividing(double num1, double num2)
+	public static double dividing(double num1, double num2)
 	{
-		System.out.println(num1+" / "+num2+" = "+df.format(num1/num2));
+		double quotient = num1/num2;
+		return quotient;
 	}
 
 }
