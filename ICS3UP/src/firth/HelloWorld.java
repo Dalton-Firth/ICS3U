@@ -29,9 +29,9 @@ public class HelloWorld {
 		
 		//deciding turns
 		int turnCount=0;
-		double rand1=(Math.random()*100);;
-		double rand2=(Math.random()*100);;
-		double rand3=(Math.random()*100);;
+		double rand1=(Math.random()*100);
+		double rand2=(Math.random()*100);
+		double rand3=(Math.random()*100);
 		
 		
 		//setting user names
@@ -99,6 +99,11 @@ public class HelloWorld {
 		//Setting the questions and answers
 		String[][] questions=new String[5][6]; 
 		String[][] answerTemplate=new String[5][6]; 
+		String[] finalQuestion= {"16th CENTURY SCIENTISTS: It is often said of this man that he 'stopped the sun and moved the earth'",
+		"WORLD LANDMARKS: Built for a World's Fair in 1889, its visitors that year included the Prince of Wales & Buffalo Bill; it still gets 7M a year",
+		"TV CHARACTERS: This 8'2 character who made his debut in 1969 is still going strong",
+		"WORD ORIGINS: In the mid-1960s, a decade after it first appeared in a holiday tale, this word came to be used for any mean killjoy"};
+		String[] finalAnswers={"copernicus","the eiffel tower","big bird","grinch"};
 		
 		//French profession names
 		questions[0][0]="chanteuse";
@@ -135,7 +140,7 @@ public class HelloWorld {
 		
 		answerTemplate[0][2]="Face to face";
 		answerTemplate[1][2]="Got to go";
-		answerTemplate[2][2]="ha ha, only kidding";
+		answerTemplate[2][2]="ha ha only kidding";
 		answerTemplate[3][2]="none of your business";
 		answerTemplate[4][2]="God only knows";
 		
@@ -159,7 +164,7 @@ public class HelloWorld {
 		questions[3][4]="This deep-water fish named for its color & coarse texture can live to be 140";
 		questions[4][4]="The 2 colors that come before 'algae' in another name for cyanobacteria";
 		
-		answerTemplate[0][4]="the Purple Heart";
+		answerTemplate[0][4]="Purple Heart";
 		answerTemplate[1][4]="gray";
 		answerTemplate[2][4]="Maroon 5";
 		answerTemplate[3][4]="orange roughy";
@@ -1241,13 +1246,20 @@ public class HelloWorld {
 		c.clear();
 		
 		//final question
-		c.println("The final question of onights game: what is 2+2?");
+		c.println("The final question of tonights game "+finalQuestion[(int)(Math.random*4)]);
 		if(turnCount%3==0)
 		{
 			c.println(name1+" enter the amount that you would like to bet(if you have a score of 0 or less your bet will automatically be set to 0):");
 			bet=Integer.parseInt(c.readLine());
 			if (scores[0]<=0)
 				bet=0;
+			c.println("enter the answer to the final question")
+			guess=c.readLine();
+			if(isRight(answer, guess))
+				scores[0]+=bet;
+			else
+				scores[0]-=bet;
+			c.clear();
 		}
 		else if(turnCount%3==1)
 		{
@@ -1255,6 +1267,13 @@ public class HelloWorld {
 			bet=Integer.parseInt(c.readLine());
 			if (scores[1]<=0)
 				bet=0;
+			c.println("enter the answer to the final question")
+			guess=c.readLine();
+			if(isRight(answer, guess))
+				scores[1]+=bet;
+			else
+				scores[1]-=bet;
+			c.clear();
 		}
 		else if(turnCount%3==2)
 		{
@@ -1262,10 +1281,22 @@ public class HelloWorld {
 			bet=Integer.parseInt(c.readLine());
 			if (scores[2]<=0)
 				bet=0;
+			c.println("enter the answer to the final question")
+			guess=c.readLine();
+			if(isRight(answer, guess))
+				scores[2]+=bet;
+			else
+				scores[2]-=bet;
+			c.clear();
 		}
 		
+		//final scores
+		c.println("final scores for tonights game:")
+		c.println(name1+": "+scores[0])
+		c.println(name2+": "+scores[1])
+		c.println(name3+": "+scores[2])
 		
-	}
+	}//end of main method
 	
 	/**
 	 * Method that checks to see if the answer that the user inputted is correct
@@ -1281,6 +1312,12 @@ public class HelloWorld {
 				}
 		return (false);
 	}
+	/**
+	 * Method that adds scores
+	 * @param scores int
+	 * @param quest String
+	 * @return scores
+	 */
 	public static int scoreadder(int scores, String quest)
 	{
 		if(quest.indexOf("2")!=-1)
@@ -1295,6 +1332,12 @@ public class HelloWorld {
 				scores+=1000;
 		return(scores);
 	}
+	/**
+	 * Method that adds scores
+	 * @param scores int
+	 * @param quest String
+	 * @return scores
+	 */
 	public static int scoresubtracter(int scores, String quest)
 	{
 		if(quest.indexOf("2")!=-1)
