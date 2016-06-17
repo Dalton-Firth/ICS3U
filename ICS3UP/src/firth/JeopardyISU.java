@@ -1228,14 +1228,14 @@ public class JeopardyISU {
 		c.clear();
 		
 		//final question
-		c.println("The final question of tonights game "+finalQuestion[(int)(Math.random*4)]);
+		c.println("The final question of tonights game "+finalQuestion[(int)(Math.random()*4)]);
 		if(turnCount%3==0)
 		{
 			c.println(name1+" enter the amount that you would like to bet(if you have a score of 0 or less your bet will automatically be set to 0):");
 			bet=Integer.parseInt(c.readLine());
 			if (scores[0]<=0)
 				bet=0;
-			c.println("enter the answer to the final question")
+			c.println("enter the answer to the final question");
 			guess=c.readLine();
 			if(isRight(answer, guess))
 				scores[0]+=bet;
@@ -1249,7 +1249,7 @@ public class JeopardyISU {
 			bet=Integer.parseInt(c.readLine());
 			if (scores[1]<=0)
 				bet=0;
-			c.println("enter the answer to the final question")
+			c.println("enter the answer to the final question");
 			guess=c.readLine();
 			if(isRight(answer, guess))
 				scores[1]+=bet;
@@ -1263,7 +1263,7 @@ public class JeopardyISU {
 			bet=Integer.parseInt(c.readLine());
 			if (scores[2]<=0)
 				bet=0;
-			c.println("enter the answer to the final question")
+			c.println("enter the answer to the final question");
 			guess=c.readLine();
 			if(isRight(answer, guess))
 				scores[2]+=bet;
@@ -1273,10 +1273,10 @@ public class JeopardyISU {
 		}
 		
 		//final scores
-		c.println("final scores for tonights game:")
-		c.println(name1+": "+scores[0])
-		c.println(name2+": "+scores[1])
-		c.println(name3+": "+scores[2])
+		c.println("final scores for tonights game:");
+		c.println(name1+": "+scores[0]);
+		c.println(name2+": "+scores[1]);
+		c.println(name3+": "+scores[2]);
 		
 	}//end of main method
 	
