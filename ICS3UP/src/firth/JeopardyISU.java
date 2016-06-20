@@ -1224,6 +1224,8 @@ public class JeopardyISU {
 					i--;
 				}
 			}//end of poker words
+			else
+				i--;
 		}//END OF FOR LOOP FOR THE BOARD
 		c.clear();
 		
