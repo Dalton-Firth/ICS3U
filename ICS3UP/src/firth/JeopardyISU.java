@@ -401,7 +401,7 @@ public class JeopardyISU {
 			}//end of French questions
 			/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			//smallest in area
-			if(questChoose.indexOf("sma")!=-1)
+			else if(questChoose.indexOf("sma")!=-1)
 			{
 				if (questChoose.indexOf("2")!=-1&&gameBoard[0][1]!="   ")
 				{
@@ -567,7 +567,7 @@ public class JeopardyISU {
 			}//end of smallest in area
 			////////////////////////////////////////////////////////////////////////////////////////////////////////
 			//text me
-			if(questChoose.indexOf("text")!=-1)
+			else if(questChoose.indexOf("text")!=-1)
 			{
 				if (questChoose.indexOf("2")!=-1&&gameBoard[0][2]!="   ")
 				{
@@ -732,7 +732,7 @@ public class JeopardyISU {
 			}//end of text me
 			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			//rhyme boss
-			if(questChoose.indexOf("rhyme")!=-1)
+			else if(questChoose.indexOf("rhyme")!=-1)
 			{
 				if (questChoose.indexOf("2")!=-1&&gameBoard[0][3]!="   ")
 				{
@@ -895,9 +895,9 @@ public class JeopardyISU {
 					i--;
 				}
 			}//end of rhyme boss
-						//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			//in living colour
-			if(questChoose.indexOf("colo")!=-1)
+			else if(questChoose.indexOf("colo")!=-1)
 			{
 				if (questChoose.indexOf("2")!=-1&&gameBoard[0][4]!="   ")
 				{
@@ -1060,9 +1060,9 @@ public class JeopardyISU {
 					i--;
 				}
 			}//end of in living colour
-									//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			//poker words
-			if(questChoose.indexOf("poke")!=-1)
+			else if(questChoose.indexOf("poke")!=-1)
 			{
 				if (questChoose.indexOf("2")!=-1&&gameBoard[0][5]!="   ")
 				{
